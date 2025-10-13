@@ -57,12 +57,12 @@ Follow the instructions below to set up and train the MAKAR model components.
 
    - For **GMNER**:
      ```bash
-     python -m scripts.train -c examples/PGIM/twitter-10000-GMNER.yaml
+     python -m scripts.train -c examples/MAKAR/twitter-10000-GMNER.yaml
      ```
 
    - For **FMNERG**:
      ```bash
-     python -m scripts.train -c examples/PGIM/twitter-10000-FMNERG.yaml
+     python -m scripts.train -c examples/MAKAR/twitter-10000-FMNERG.yaml
      ```
 
 ---
