@@ -35,6 +35,12 @@ pip install -r requirements.txt -f https://modelscope.oss-cn-beijing.aliyuncs.co
 
 Step 2: Copy MAKAR folder into .../adaseq/examples/
 ```bash
+cd MNER_code/AdaSeq
+```
+
+Navigate to the KEA directory:
+
+```bash
 -adaseq
 ---|examples
 -----|MAKAR
@@ -58,27 +64,15 @@ Step 3：Replace the original adaseq folder with our adaseq folder
 
 Step 4: Training Model
 
-1. Navigate to the KEA directory:
-   ```bash
-   cd MNER_code/AdaSeq
-   ```
+- For **GMNER**:
+  ```bash
+  python -m scripts.train -c examples/MAKAR/twitter-10000-GMNER.yaml
+  ```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Train the model:
-
-   - For **GMNER**:
-     ```bash
-     python -m scripts.train -c examples/MAKAR/twitter-10000-GMNER.yaml
-     ```
-
-   - For **FMNERG**:
-     ```bash
-     python -m scripts.train -c examples/MAKAR/twitter-10000-FMNERG.yaml
-     ```
+- For **FMNERG**:
+  ```bash
+  python -m scripts.train -c examples/MAKAR/twitter-10000-FMNERG.yaml
+  ```
 
 ---
 
