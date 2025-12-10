@@ -27,22 +27,24 @@ MAKAR is based on AdaSeq, AdaSeq project is based on Python version >= 3.7 and P
 
 Step 1: Installation
 
+```bash
 git clone https://github.com/modelscope/adaseq.git
 cd adaseq
 pip install -r requirements.txt -f https://modelscope.oss-cn-beijing.aliyuncs.com/releases/repo.html
-
+```
 
 Step 2: Copy MAKAR folder into .../adaseq/examples/
-
+```bash
 -adaseq
 ---|examples
 -----|MAKAR
 -------|twitter-10000-FMNERG.yaml
 -------|twitter-10000-GMNER.yaml
-
+```
 
 Step 3：Replace the original adaseq folder with our adaseq folder
 
+```bash
 -adaseq
 ---|.git
 ---|.github
@@ -52,6 +54,7 @@ Step 3：Replace the original adaseq folder with our adaseq folder
 ---|scripts
 ---|tests
 ---|tools
+```
 
 Step 4: Training Model
 
