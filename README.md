@@ -124,6 +124,12 @@ cd Search
 > 💡 **Tip**: Ensure your environment satisfies all dependency requirements before running any scripts.  
 > 🚀 **GPU support is strongly recommended** for efficient training and inference.
 
+### 🔗 Pre-trained Models
+- [**MAKAR-3B**](https://modelscope.cn/models/soliton110/MAKAR-3B)  
+  Lightweight version optimized for resource-constrained environments
+- [**MAKAR-7B**](https://modelscope.cn/models/soliton110/MAKAR-7B)  
+  Full-capacity version with enhanced reasoning capabilities
+
 ---
 
 ## 🙏 Acknowledgments
