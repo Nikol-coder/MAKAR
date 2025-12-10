@@ -23,47 +23,56 @@ Follow the instructions below to set up and train the MAKAR model components.
 
 ### 🧠 Knowledge Enhancement Agent (KEA)
 
-#### SFT
-1. Navigate to the KEA directory:
-   ```bash
-   cd LLaMA-Factory
-   ```
+MAKAR is based on AdaSeq, AdaSeq project is based on Python version >= 3.7 and PyTorch version >= 1.8.
 
-2. Install dependencies:
-   ```bash
-    pip install -e ".[torch,metrics]"
+Step 1: Installation
 
-    pip install "deepspeed>=0.10.0,<=0.16.9"
-    ```
+```bash
+git clone https://github.com/modelscope/adaseq.git
+cd adaseq
+pip install -r requirements.txt -f https://modelscope.oss-cn-beijing.aliyuncs.com/releases/repo.html
+```
 
-3. Train the model:
-   ```bash
-    FORCE_TORCHRUN=1 llamafactory-cli train examples/train_full/easy_qwen25vl_full_sft_3k.yaml
-    ```
+Step 2: Copy MAKAR folder into .../adaseq/examples/
+```bash
+cd MNER_code/AdaSeq
+```
 
-#### GRPO
+Navigate to the KEA directory:
 
-1. Navigate to the KEA directory:
-   ```bash
-   cd MNER_code/AdaSeq
-   ```
+```bash
+-adaseq
+---|examples
+-----|MAKAR
+-------|twitter-10000-FMNERG.yaml
+-------|twitter-10000-GMNER.yaml
+```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Step 3：Replace the original adaseq folder with our adaseq folder
 
-3. Train the model:
+```bash
+-adaseq
+---|.git
+---|.github
+---|adaseq   <-- (Use our adaseq replace it)  
+---|docs
+---|examples
+---|scripts
+---|tests
+---|tools
+```
 
-   - For **GMNER**:
-     ```bash
-     python -m scripts.train -c examples/PGIM/twitter-10000-GMNER.yaml
-     ```
+Step 4: Training Model
 
-   - For **FMNERG**:
-     ```bash
-     python -m scripts.train -c examples/PGIM/twitter-10000-FMNERG.yaml
-     ```
+- For **GMNER**:
+  ```bash
+  python -m scripts.train -c examples/MAKAR/twitter-10000-GMNER.yaml
+  ```
+
+- For **FMNERG**:
+  ```bash
+  python -m scripts.train -c examples/MAKAR/twitter-10000-FMNERG.yaml
+  ```
 
 ---
 
@@ -96,6 +105,26 @@ cd Search
 
 ### 🤖 Entity Reasoning Grounding Agent (ERGA)
 
+#### SFT
+1. Navigate to the KEA directory:
+   ```bash
+   cd LLaMA-Factory
+   ```
+
+2. Install dependencies:
+   ```bash
+    pip install -e ".[torch,metrics]"
+
+    pip install "deepspeed>=0.10.0,<=0.16.9"
+    ```
+
+3. Train the model:
+   ```bash
+    FORCE_TORCHRUN=1 llamafactory-cli train examples/train_full/easy_qwen25vl_full_sft_3k.yaml
+    ```
+
+#### GRPO
+
 1. Navigate to the ERGA directory and install in development mode:
    ```bash
    cd EasyR1
@@ -124,6 +153,12 @@ cd Search
 > 💡 **Tip**: Ensure your environment satisfies all dependency requirements before running any scripts.  
 > 🚀 **GPU support is strongly recommended** for efficient training and inference.
 
+### 🔗 Pre-trained Models
+- [**MAKAR-3B**](https://modelscope.cn/models/soliton110/MAKAR-3B)  
+  Lightweight version optimized for resource-constrained environments
+- [**MAKAR-7B**](https://modelscope.cn/models/soliton110/MAKAR-7B)  
+  Full-capacity version with enhanced reasoning capabilities
+
 ---
 
 ## 🙏 Acknowledgments
@@ -136,3 +171,4 @@ Additionally, our multi-stage training framework is built on top of **AdaSeq**, 
 ---
 
 > 📬 **Contact**: For questions or collaboration, please reach out via GitHub Issues or email (linxinkui@iie.ac.cn).
+
