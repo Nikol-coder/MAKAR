@@ -1,6 +1,6 @@
 # 🌐 MAKAR: a Multi-Agent framework based Knowledge-Augmented Reasoning for Grounded Multimodal Named Entity Recognition
 
-> **MAKAR**: Grounded Multimodal Named Entity Recognition (GMNER), which aims to extract textual entities, their types, and corresponding visual regions from image-text data
+> **MAKAR**: Grounded Multimodal Named Entity Recognition (GMNER), which aims to extract textual entities, their types, and corresponding visual regions from image-text data. For details, see our EMNLP 2025 paper: [MAKAR: A Multi-Agent Framework based Knowledge-Augmented Reasoning for Grounded Multimodal Named Entity Recognition](https://aclanthology.org/2025.emnlp-main.311.pdf).
 ---
 
 ## 📰 News 🔥
